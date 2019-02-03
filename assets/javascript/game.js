@@ -4,6 +4,12 @@ var guessed = document.querySelector(".guessed");
 //Assign HTML element that will hide/appear to a variable and assign style of hidden
 var hide = document.querySelector(".hide");
 hide.style.visibility = "hidden";
+var lettersGuessed = document.querySelector(".lettersGuessed");
+
+//Assign Image element to a var
+var results = document.querySelector(".result");
+var postResult = document.querySelector("I");
+
 
 //Assign scoreboard HTML elments to a variable
 var winSelector = document.querySelector(".wins");
@@ -13,7 +19,7 @@ var leftSelector = document.querySelector(".left");
 //Declare var that will monitor scores
 var wins = 0;
 var losses = 0;
-var remainingGuesses = 5;
+var remainingGuesses = 9;
 
 //Declare var used to store users keys
 var g;
@@ -44,6 +50,8 @@ function onKeyup(event) {
 //Create a listing event that records keyboard events
 document.onkeydown = function(event) {
 
+
+
     if (remainingGuesses === 0){
         event.preventDefault();
         leftSelector.textContent = "Guesses left: " + remainingGuesses;
@@ -64,17 +72,27 @@ document.onkeydown = function(event) {
     //Added for every time the user types a key
     remainingGuesses--;
 
+        if(lettersGuessed.textContent) {
+            var getPreviousContent = lettersGuessed.textContent;
+            lettersGuessed.textContent = getPreviousContent + ", " + g;
+        }else{
+            lettersGuessed.textContent = " " + g;
+        }
+        //TODO: Display all user's gueses.  Currently only one shows.
 
-    var addH3 = document.createElement("h3");
-    addH3.innerHTML = g;
-    guessed.appendChild(addH3); 
-    
-    if (g.toLowerCase() === letter){
-        console.log("You Won!!!")
+
+        postResult.className = "far fa-thumbs-down";
+
+
+        if (g.toLowerCase() === letter){
+        //TODO: Toggle css style for a win.
+        //TODO: Call out to the screen that the user guessed correctly.
+        console.log("You Won!!!");
+        postResult.className = "far fa-thumbs-up";
         wins += 1;
         winSelector.textContent = "Wins: " + wins;
         letter = generateLetter();
-        remainingGuesses = 5;
+        remainingGuesses = 9;
         leftSelector.textContent = "Guesses left: " + remainingGuesses;
     }
     

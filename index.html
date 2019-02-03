@@ -4,23 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Guess a letter</title>
 </head>
 <body>
-    <h1>The Psychic Game</h1>
-    <div class="guessed">
-        <h3>Guess what letter I'm thinking?</h3>
-        <hr>
-        <h3 class="hide">You guessed:</h3>
+    <!--Add some styling-->
+
+
+    <div class="wrapper">
+      <header>
+        <h1>The Psychic Game</h1>
+      </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+            <div class="guessed">
+                <h3>Guess what letter I'm thinking?</h3>
+                <h3 class="hide">You guessed: <br> <span class="lettersGuessed"></span></h3>
+            </div>
+            </div>
+            <div class="col-2 result">
+                <i class=""></i>
+            </div>
+
+            <div class="col-5">
+                <div>
+
+
+
+                    <h3 class="wins card-text"></h3>
+                    <h3 class="losses card-text"></h3>
+                    <h3 class="left card-text"></h3>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
     </div>
-    <h3 class="wins"></h3>
-    <h3 class="losses"></h3>
-    <h3 class="left"></h3>
+    </div>
 
 
 
     <script src="assets/javascript/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 </html>

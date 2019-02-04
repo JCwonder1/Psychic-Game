@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-    width: 75%;
+    width: 60%;
     margin: 0px auto;
     border: 4px solid black;
     border-radius: 8px;
@@ -38,5 +38,17 @@ header {
 }
 
 .far {
-    font-size: 80px;
+    font-size: 50px;
+}
+
+.result p{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media (max-width: 600px){
+    header{
+        font-size: 10px;
+        height:130px;
+    }
 }
